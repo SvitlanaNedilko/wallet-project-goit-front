@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/wallet-project-goit-front/static/css/main.64659eb4.chunk.css",
+    "main.js": "/wallet-project-goit-front/static/js/main.d5808a2e.chunk.js",
+    "main.js.map": "/wallet-project-goit-front/static/js/main.d5808a2e.chunk.js.map",
+    "runtime-main.js": "/wallet-project-goit-front/static/js/runtime-main.f2284ab8.js",
+    "runtime-main.js.map": "/wallet-project-goit-front/static/js/runtime-main.f2284ab8.js.map",
+    "static/css/2.ac05be38.chunk.css": "/wallet-project-goit-front/static/css/2.ac05be38.chunk.css",
+    "static/js/2.e1f72874.chunk.js": "/wallet-project-goit-front/static/js/2.e1f72874.chunk.js",
+    "static/js/2.e1f72874.chunk.js.map": "/wallet-project-goit-front/static/js/2.e1f72874.chunk.js.map",
+    "index.html": "/wallet-project-goit-front/index.html",
+    "static/css/2.ac05be38.chunk.css.map": "/wallet-project-goit-front/static/css/2.ac05be38.chunk.css.map",
+    "static/css/main.64659eb4.chunk.css.map": "/wallet-project-goit-front/static/css/main.64659eb4.chunk.css.map",
+    "static/js/2.e1f72874.chunk.js.LICENSE.txt": "/wallet-project-goit-front/static/js/2.e1f72874.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/wallet-project-goit-front/static/media/circe_bold.e9492570.svg",
+    "static/media/diagramm.module.scss": "/wallet-project-goit-front/static/media/arrow.c791c7ed.svg",
+    "static/media/chevron-down.d9881e7f.svg": "/wallet-project-goit-front/static/media/chevron-down.d9881e7f.svg",
+    "static/media/close.5b868b8b.svg": "/wallet-project-goit-front/static/media/close.5b868b8b.svg",
+    "static/media/currency.4a73a606.svg": "/wallet-project-goit-front/static/media/currency.4a73a606.svg",
+    "static/media/date-range.7ca7cedd.svg": "/wallet-project-goit-front/static/media/date-range.7ca7cedd.svg",
+    "static/media/diagram.da04b93c.svg": "/wallet-project-goit-front/static/media/diagram.da04b93c.svg",
+    "static/media/email.ab0a88af.svg": "/wallet-project-goit-front/static/media/email.ab0a88af.svg",
+    "static/media/RegistrationPage.scss": "/wallet-project-goit-front/static/media/rectangle@2x.626f9fa3.png",
+    "static/media/LoginPage.scss": "/wallet-project-goit-front/static/media/frame-tablet@2x.c2ae6419.png",
+    "static/media/home.d9256516.svg": "/wallet-project-goit-front/static/media/home.d9256516.svg",
+    "static/media/lock.3a046388.svg": "/wallet-project-goit-front/static/media/lock.3a046388.svg",
+    "static/media/name.e31dbcd3.svg": "/wallet-project-goit-front/static/media/name.e31dbcd3.svg",
+    "static/media/plus.331f2d61.svg": "/wallet-project-goit-front/static/media/plus.331f2d61.svg",
+    "static/media/symbol-defs.ed399770.svg": "/wallet-project-goit-front/static/media/symbol-defs.ed399770.svg",
+    "static/media/wave-desktop.2fe84cb6.svg": "/wallet-project-goit-front/static/media/wave-desktop.2fe84cb6.svg",
+    "static/media/wave-mobile.131964ba.svg": "/wallet-project-goit-front/static/media/wave-mobile.131964ba.svg",
+    "static/media/wave-tablet.af2ed23a.svg": "/wallet-project-goit-front/static/media/wave-tablet.af2ed23a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2284ab8.js",
+    "static/css/2.ac05be38.chunk.css",
+    "static/js/2.e1f72874.chunk.js",
+    "static/css/main.64659eb4.chunk.css",
+    "static/js/main.d5808a2e.chunk.js"
+  ]
+}
