@@ -1,32 +1,32 @@
-import { React } from "react";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { authOperations } from "../../redux/auth";
-import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { Formik, Form } from "formik";
-import * as Yup from "yup";
+import { React } from 'react'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { authOperations } from '../../redux/auth'
+import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { Formik, Form } from 'formik'
+import * as Yup from 'yup'
 // import { GoogleLogin } from "react-google-login";
 
 // import { BACK_END } from "../../assets/API/BACK_END";
 
-import PasswordStrenght from "./PasswordStrength";
-import MyTextInput from "../MyTextInput";
-import MainButton from "../MainButton";
-import Logo from "../Logo";
+import PasswordStrenght from './PasswordStrength'
+import MyTextInput from '../MyTextInput'
+import MainButton from '../MainButton'
+import Logo from '../Logo'
 
-import { ReactComponent as EmailIcon } from "../../icons/email.svg";
-import { ReactComponent as LockIcon } from "../../icons/lock.svg";
-import { ReactComponent as NameIcon } from "../../icons/name.svg";
+import { ReactComponent as EmailIcon } from '../../icons/email.svg'
+import { ReactComponent as LockIcon } from '../../icons/lock.svg'
+import { ReactComponent as NameIcon } from '../../icons/name.svg'
 // import { ReactComponent as GoogleIcon } from "../../images/googleSVG/google.svg";
 
-import "./RegistrationForm.scss";
-import "../MainButton/MainButton.scss";
+import './RegistrationForm.scss'
+import '../MainButton/MainButton.scss'
 
 function RegistrationForm() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const [password, setPassword] = useState("");
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const [password, setPassword] = useState('')
 
   // const [loginData, setLoginData] = useState(
   //   localStorage.getItem("loginData")
@@ -36,27 +36,27 @@ function RegistrationForm() {
 
   const validationsSchema = Yup.object({
     email: Yup.string()
-      .email("Введите корректный e-mail")
-      .required("Обязательное поле для заполнения!"),
+      .email('Введите корректный e-mail')
+      .required('Обязательное поле для заполнения!'),
     password: Yup.string()
-      .min(6, "Пароль должен состоять минимум из 6 символов")
-      .max(14, "Пароль должен состоять максимум из 14 символов")
-      .required("Обязательное поле для заполнения!"),
+      .min(6, 'Пароль должен состоять минимум из 6 символов')
+      .max(14, 'Пароль должен состоять максимум из 14 символов')
+      .required('Обязательное поле для заполнения!'),
     confirmPassword: Yup.string()
-      .oneOf([Yup.ref("password")], "Пароли не совпадают")
-      .required("Требуется подтверждение пароля!"),
+      .oneOf([Yup.ref('password')], 'Пароли не совпадают')
+      .required('Требуется подтверждение пароля!'),
     name: Yup.string()
       .typeError()
-      .min(1, "Имя должно состоять минимум из 1 символа")
-      .max(12, "Имя должно состоять максимум из 12 символов")
-      .required("Обязательное поле для заполнения!"),
-  });
+      .min(1, 'Имя должно состоять минимум из 1 символа')
+      .max(12, 'Имя должно состоять максимум из 12 символов')
+      .required('Обязательное поле для заполнения!'),
+  })
 
   const handleRegister = ({ name, email, password }) => {
     // evt.preventDefault();
-    dispatch(authOperations.register({ name, email, password }));
-    navigate("/login");
-  };
+    dispatch(authOperations.register({ name, email, password }))
+    navigate('/login')
+  }
 
   // const responseGoogle = async (googleData) => {
   //   const res = await fetch(`${BACK_END}/api/users/login`, {
@@ -78,10 +78,10 @@ function RegistrationForm() {
     <>
       <Formik
         initialValues={{
-          email: "",
-          password: "",
-          confirmPassword: "",
-          name: "",
+          email: '',
+          password: '',
+          confirmPassword: '',
+          name: '',
         }}
         validateOnBlur
         onSubmit={handleRegister}
@@ -195,7 +195,10 @@ function RegistrationForm() {
               />
 
               <div>
-                <NavLink to="/login" className="main_btn">
+                <NavLink
+                  to="/wallet-project-goit-front/login"
+                  className="main_btn"
+                >
                   Вход
                 </NavLink>
               </div>
@@ -204,7 +207,7 @@ function RegistrationForm() {
         )}
       </Formik>
     </>
-  );
+  )
 }
 
-export default RegistrationForm;
+export default RegistrationForm

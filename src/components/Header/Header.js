@@ -1,30 +1,30 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import Modal from "react-modal";
-import Logo from "../Logo";
-import { authOperations } from "../../redux/auth";
-import sprite from "../../images/svg/symbol-defs.svg";
-import UserInfo from "../UserInfo";
-import "./Header.scss";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import Modal from 'react-modal'
+import Logo from '../Logo'
+import { authOperations } from '../../redux/auth'
+import sprite from '../../images/svg/symbol-defs.svg'
+import UserInfo from '../UserInfo'
+import './Header.scss'
 
-Modal.setAppElement("#root");
+Modal.setAppElement('#root')
 
 const Header = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false)
 
-  const openModal = () => setIsOpen(true);
+  const openModal = () => setIsOpen(true)
 
-  const closeModal = () => setIsOpen(false);
+  const closeModal = () => setIsOpen(false)
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const logOut = (e) => {
-    dispatch(authOperations.logOut());
-  };
+    dispatch(authOperations.logOut())
+  }
   return (
     <header className="Header">
-      <Link to="/home" className="Header__link">
+      <Link to="/wallet-project-goit-front/home" className="Header__link">
         <Logo />
         <h1 className="Header__logo--text">Wallet</h1>
       </Link>
@@ -65,7 +65,7 @@ const Header = () => {
         </div>
       </Modal>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

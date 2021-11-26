@@ -1,27 +1,27 @@
-import { React } from "react";
-import { useDispatch } from "react-redux";
+import { React } from 'react'
+import { useDispatch } from 'react-redux'
 // import { useState } from "react";
-import { authOperations } from "../../redux/auth";
-import { NavLink } from "react-router-dom";
-import { Formik, Form } from "formik";
-import * as Yup from "yup";
+import { authOperations } from '../../redux/auth'
+import { NavLink } from 'react-router-dom'
+import { Formik, Form } from 'formik'
+import * as Yup from 'yup'
 // import { GoogleLogin } from "react-google-login";
 
 // import { BACK_END } from "../../assets/API/BACK_END";
 
-import MyTextInput from "../MyTextInput";
-import MainButton from "../MainButton";
-import Logo from "../Logo";
-import { ReactComponent as EmailIcon } from "../../icons/email.svg";
-import { ReactComponent as LockIcon } from "../../icons/lock.svg";
+import MyTextInput from '../MyTextInput'
+import MainButton from '../MainButton'
+import Logo from '../Logo'
+import { ReactComponent as EmailIcon } from '../../icons/email.svg'
+import { ReactComponent as LockIcon } from '../../icons/lock.svg'
 // import { ReactComponent as GoogleIcon } from "../../images/googleSVG/google.svg";
 
-import "./LoginForm.scss";
-import "../MainButton/MainButton.scss";
+import './LoginForm.scss'
+import '../MainButton/MainButton.scss'
 // import "./GoogleAuth.scss";
 
 function LoginForm() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   // const [loginData, setLoginData] = useState(
   //   localStorage.getItem("loginData")
@@ -30,19 +30,19 @@ function LoginForm() {
   // );
 
   const validationsSchema = Yup.object().shape({
-    email: Yup.string("Введите e-mail")
-      .email("Введите корректный e-mail")
-      .required("Обязательное поле для заполнения!"),
-    password: Yup.string("Ввведите пароль")
-      .min(6, "Пароль должен состоять минимум из 6 символов")
-      .max(14, "Пароль должен состоять максимум из 14 символов")
-      .required("Обязательное поле для заполнения!"),
-  });
+    email: Yup.string('Введите e-mail')
+      .email('Введите корректный e-mail')
+      .required('Обязательное поле для заполнения!'),
+    password: Yup.string('Ввведите пароль')
+      .min(6, 'Пароль должен состоять минимум из 6 символов')
+      .max(14, 'Пароль должен состоять максимум из 14 символов')
+      .required('Обязательное поле для заполнения!'),
+  })
 
   const handleLogin = ({ email, password }) => {
     // evt.preventDefault();
-    dispatch(authOperations.logIn({ email, password }));
-  };
+    dispatch(authOperations.logIn({ email, password }))
+  }
 
   // const responseGoogle = async (googleData) => {
   //   const res = await fetch(`${BACK_END}/api/users/login`, {
@@ -64,8 +64,8 @@ function LoginForm() {
     <>
       <Formik
         initialValues={{
-          email: "",
-          password: "",
+          email: '',
+          password: '',
         }}
         validateOnBlur
         onSubmit={handleLogin}
@@ -150,7 +150,10 @@ function LoginForm() {
               />
 
               <div>
-                <NavLink to="/register" className="main_btn">
+                <NavLink
+                  to="/wallet-project-goit-front/register"
+                  className="main_btn"
+                >
                   Регистрация
                 </NavLink>
               </div>
@@ -159,7 +162,7 @@ function LoginForm() {
         )}
       </Formik>
     </>
-  );
+  )
 }
 
-export default LoginForm;
+export default LoginForm

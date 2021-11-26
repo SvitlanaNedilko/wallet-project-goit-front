@@ -1,33 +1,33 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import Media from "react-media";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Container from "./components/Container";
-import DashboardPage from "./pages/DashboardPage";
-import LoginPage from "./pages/LoginPage";
-import RegistrationPage from "./pages/RegistrationPage";
-import HomeTab from "./components/HomeTab";
-import DiagramTab from "./components/DiagramTab";
-import PrivateOutlet from "./components/PrivateRoute";
-import PublicOutlet from "./components/PublicRoute";
-import Currency from "./components/Currency";
-import Loader from "./components/Loader";
-import { authOperations } from "./redux/auth";
-import "./App.scss";
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import Media from 'react-media'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import Container from './components/Container'
+import DashboardPage from './pages/DashboardPage'
+import LoginPage from './pages/LoginPage'
+import RegistrationPage from './pages/RegistrationPage'
+import HomeTab from './components/HomeTab'
+import DiagramTab from './components/DiagramTab'
+import PrivateOutlet from './components/PrivateRoute'
+import PublicOutlet from './components/PublicRoute'
+import Currency from './components/Currency'
+import Loader from './components/Loader'
+import { authOperations } from './redux/auth'
+import './App.scss'
 
 function App() {
-  const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch()
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    dispatch(authOperations.getCurrentUser());
-  }, [dispatch]);
+    dispatch(authOperations.getCurrentUser())
+  }, [dispatch])
 
   useEffect(() => {
-    setLoading(false);
-  }, []);
+    setLoading(false)
+  }, [])
 
   return (
     <Container>
@@ -37,7 +37,10 @@ function App() {
         ) : (
           <Route path="/" element={<PrivateOutlet />}>
             <Route element={<DashboardPage />}>
-              <Route index element={<Navigate to="/home" />} />
+              <Route
+                index
+                element={<Navigate to="/wallet-project-goit-front/home" />}
+              />
               <Route path="home" element={<HomeTab />} />
               <Route path="diagram" element={<DiagramTab />} />
               <Route
@@ -45,7 +48,11 @@ function App() {
                 element={
                   <Media query={{ maxWidth: 767 }}>
                     {(matches) =>
-                      matches ? <Currency /> : <Navigate to="/home" />
+                      matches ? (
+                        <Currency />
+                      ) : (
+                        <Navigate to="/wallet-project-goit-front/home" />
+                      )
                     }
                   </Media>
                 }
@@ -64,7 +71,7 @@ function App() {
       </Routes>
       <ToastContainer autoClose={2000} />
     </Container>
-  );
+  )
 }
 
-export default App;
+export default App

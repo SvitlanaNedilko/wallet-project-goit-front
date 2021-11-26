@@ -1,14 +1,14 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import Media from "react-media";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import Media from 'react-media'
 // import PropTypes from "prop-types";
-import { ReactComponent as HomeIcon } from "../../images/svg/home.svg";
-import { ReactComponent as DiagramIcon } from "../../images/svg/diagram.svg";
-import { ReactComponent as CurrencyIcon } from "../../images/svg/currency.svg";
+import { ReactComponent as HomeIcon } from '../../images/svg/home.svg'
+import { ReactComponent as DiagramIcon } from '../../images/svg/diagram.svg'
+import { ReactComponent as CurrencyIcon } from '../../images/svg/currency.svg'
 // import home from "../../images/svg/home.svg";
 // import diagram from "../../images/svg/diagram.svg";
 // import currency from "../../images/svg/currency.svg";
-import "./Navigation.scss";
+import './Navigation.scss'
 
 // const checkActive = (match, location) => {
 //   console.log(location);
@@ -23,25 +23,10 @@ const Navigation = () => {
     <nav className="nav_container">
       <ul className="nav_list">
         <li>
-          {/* <NavLink
-              // className={({ isActive }) => 'link' + (isActive ? ' nav_link_active' : '')}
-            exact 
-            to="/home"
-            activeClassName="nav_link_active"
-            // isActive={checkActive}
-            className="nav_link"
-           
-          >
-            <img src={home} alt="home" className="nav_img" />
-            <Media
-              query="(min-width: 768px)"
-              render={() => <span className="nav_text">Главная</span>}
-            />
-          </NavLink> */}
           <NavLink
-            to="/home"
+            to="/wallet-project-goit-front/home"
             className={({ isActive }) =>
-              "nav_link" + (isActive ? " nav_link_active" : "")
+              'nav_link' + (isActive ? ' nav_link_active' : '')
             }
           >
             <HomeIcon className="nav_icon" />
@@ -52,28 +37,13 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li>
-          {/* <NavLink
-           exact
-            to="/diagram"
-            activeClassName="nav_link_active"
-            className="nav_link"
-          >
-            <img src={diagram} alt="diagram" className="nav_img" />
-            <Media
-              query="(min-width: 768px)"
-              render={() => (
-                <span className="nav_text">Статистика</span>
-              )}
-            />
-          </NavLink> */}
           <NavLink
-            to="/diagram"
+            to="/wallet-project-goit-front/diagram"
             className={({ isActive }) =>
-              "nav_link" + (isActive ? " nav_link_active" : "")
+              'nav_link' + (isActive ? ' nav_link_active' : '')
             }
           >
             <DiagramIcon className="nav_icon" />
-
             <Media
               query="(min-width: 768px)"
               render={() => <span className="nav_text">Статистика</span>}
@@ -85,29 +55,13 @@ const Navigation = () => {
           <Media
             query="(max-width: 767px)"
             render={() => (
-              // <NavLink
-              // exact
-              //  to="/currency"
-              //  activeClassName="nav_link_active"
-              //  className="nav_link">
-              //   <img
-              //     src={currency}
-              //     width="44"
-              //     height="44"
-              //     alt="currency"
-              //     className="nav_img"
-              //   />
-              // </NavLink>
               <NavLink
-                to="/currency"
+                to="/wallet-project-goit-front/currency"
                 className={({ isActive }) =>
-                  "nav_link" + (isActive ? " nav_link_active" : "")
+                  'nav_link' + (isActive ? ' nav_link_active' : '')
                 }
-                // eslint-disable-next-line react/jsx-no-duplicate-props
-                className="nav_link"
               >
                 <CurrencyIcon className="nav_icon" />
-
                 <Media
                   query="(min-width: 768px)"
                   render={() => <span className="nav_text">Статистика</span>}
@@ -118,7 +72,7 @@ const Navigation = () => {
         </li>
       </ul>
     </nav>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
