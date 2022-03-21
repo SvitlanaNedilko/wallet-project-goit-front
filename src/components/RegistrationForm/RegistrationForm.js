@@ -50,7 +50,7 @@ function RegistrationForm() {
   const handleRegister = ({ name, email, password }) => {
     // evt.preventDefault();
     dispatch(authOperations.register({ name, email, password }))
-    navigate('wallet-project-goit-front/login')
+    navigate('/wallet-project-goit-front/login')
   }
 
 
