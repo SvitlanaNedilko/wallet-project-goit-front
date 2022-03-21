@@ -28,11 +28,6 @@ function RegistrationForm() {
   const navigate = useNavigate()
   const [password, setPassword] = useState('')
 
-  // const [loginData, setLoginData] = useState(
-  //   localStorage.getItem("loginData")
-  //     ? JSON.parse(localStorage.getItem("loginData"))
-  //     : null
-  // );
 
   const validationsSchema = Yup.object({
     email: Yup.string()
@@ -55,24 +50,9 @@ function RegistrationForm() {
   const handleRegister = ({ name, email, password }) => {
     // evt.preventDefault();
     dispatch(authOperations.register({ name, email, password }))
-    navigate('/login')
+    navigate('wallet-project-goit-front/login')
   }
 
-  // const responseGoogle = async (googleData) => {
-  //   const res = await fetch(`${BACK_END}/api/users/login`, {
-  //     method: "POST",
-  //     body: JSON.stringify({
-  //       token: googleData.tokenId,
-  //     }),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   });
-
-  //   const data = await res.json();
-  //   setLoginData(data);
-  //   localStorage.setItem("loginData", JSON.stringify(data));
-  // };
 
   return (
     <>
@@ -93,40 +73,6 @@ function RegistrationForm() {
               <Logo />
               <h1 className="Header__logo--text">Wallet</h1>
             </div>
-
-            {/* <div className="container_google">
-              <p className="text">
-                Вы можете авторизоваться с помощью <br />
-                Google Account:
-              </p>
-
-              {loginData ? (
-                <div>
-                  <h3 className="loggedIn">
-                    You logged in as
-                    {loginData.email}
-                  </h3>
-                </div>
-              ) : (
-                <GoogleLogin
-                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-                  render={(renderProps) => (
-                    <button
-                      onClick={renderProps.onClick}
-                      disabled={renderProps.disabled}
-                      className="button_google"
-                    >
-                      <GoogleIcon className="googleSvg" />
-                      Google
-                    </button>
-                  )}
-                  buttonText="Login"
-                  onSuccess={responseGoogle}
-                  onFailure={responseGoogle}
-                  cookiePolicy={"single_host_origin"}
-                />
-              )}
-            </div> */}
 
             <div className="container_input">
               <p className="text">
