@@ -5,18 +5,8 @@ import Media from 'react-media'
 import { ReactComponent as HomeIcon } from '../../images/svg/home.svg'
 import { ReactComponent as DiagramIcon } from '../../images/svg/diagram.svg'
 import { ReactComponent as CurrencyIcon } from '../../images/svg/currency.svg'
-// import home from "../../images/svg/home.svg";
-// import diagram from "../../images/svg/diagram.svg";
-// import currency from "../../images/svg/currency.svg";
 import './Navigation.scss'
 
-// const checkActive = (match, location) => {
-//   console.log(location);
-//   if (!location) return false;
-//   const { pathname } = location;
-//   const { url } = match;
-//   return pathname === url ? true : false;
-// };
 
 const Navigation = () => {
   return (

@@ -35,14 +35,14 @@ function App() {
         {loading ? (
           <Route path="*" element={<Loader />} />
         ) : (
-          <Route path="/" element={<PrivateOutlet />}>
+          <Route path="wallet-project-goit-front/" element={<PrivateOutlet />}>
             <Route element={<DashboardPage />}>
               <Route
                 index
                 element={<Navigate to="/wallet-project-goit-front/home" />}
               />
-              <Route path="home" element={<HomeTab />} />
-              <Route path="diagram" element={<DiagramTab />} />
+              <Route path="wallet-project-goit-front/home" element={<HomeTab />} />
+              <Route path="wallet-project-goit-front/diagram" element={<DiagramTab />} />
               <Route
                 path="currency"
                 element={
@@ -61,10 +61,10 @@ function App() {
           </Route>
         )}
 
-        <Route path="login" element={<PublicOutlet restricted />}>
+        <Route path="wallet-project-goit-front/login" element={<PublicOutlet restricted />}>
           <Route index element={<LoginPage />} />
         </Route>
-        <Route path="register" element={<PublicOutlet restricted />}>
+        <Route path="wallet-project-goit-front/register" element={<PublicOutlet restricted />}>
           <Route index element={<RegistrationPage />} />
         </Route>
         <Route path="*" element={<LoginPage />} />
